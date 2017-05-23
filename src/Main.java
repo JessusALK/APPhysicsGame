@@ -1,19 +1,36 @@
 
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
 
-public class Main
+import static java.awt.SystemColor.menu;
+
+public class Main extends Canvas implements Runnable
 {
 
     private int frames;
+    public static Menu menu;
     private Thread thread;
     private boolean running = false;
+    public static Window window;
+    public static int WIDTH, HEIGHT;
+    private static Main main;
+    public enum STATE {
+        Game,
+        Menu,
+        GameMenu,
+        GHelp,
+        Help,
+        End
+    }
+    public static STATE gameState = STATE.Menu;
 
     public Main(){
+        window = new Window("2D Shooter", this);
+        menu = new Menu(this);
+        WIDTH = window.frame.getWidth();
+        HEIGHT = window.frame.getHeight();
+
 
     }
 
@@ -44,7 +61,7 @@ public class Main
         double delta = 0;
         long timer = System.currentTimeMillis();
         frames = 0;
-        changeLevel();
+
         while (running) {
 
             long now = System.nanoTime();
@@ -91,7 +108,7 @@ public class Main
         }
 
         Graphics g = bs.getDrawGraphics();
-        super.paint(g);
+        super.paint(g);;
 
         Graphics g2d = (Graphics2D) g;
 
@@ -100,6 +117,7 @@ public class Main
 
     }
     public static void main(String[] args){
+        main = new Main();
 
     }
 }
