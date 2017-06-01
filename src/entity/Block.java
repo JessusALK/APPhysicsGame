@@ -1,3 +1,4 @@
+package entity;
 
 public class Block {
 	private double mass,coefficient,distance,time,force,answer,x;
