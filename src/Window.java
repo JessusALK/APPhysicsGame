@@ -37,9 +37,10 @@ public class Window{
 				
 			}
 			else if(currentEvent == "blockP"){
-				
+				String answerbP = JOptionPane.showInput(frame, "Problem goes here", null)
 			}
 			else if(currentEvent == "pendulumP"){
+				String answer JOptionPane.showInput(frame,"Problem goes here, null");
 				
 			}
 
