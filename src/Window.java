@@ -2,6 +2,8 @@
 
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.JOptionPane;
+
 
 /**
  * Created by Gustavo_Muratalla on 5/9/16.
@@ -25,7 +27,24 @@ public class Window{
 		Main.HEIGHT = 800;
 		frame.setPreferredSize(new Dimension(Main.WIDTH, Main.HEIGHT));
 		frame.setSize(new Dimension(Main.WIDTH, Main.HEIGHT));
+		if(currentEvent != "none"){
+			
+			if(currentEvent == "circuitP"){
+				String answercircuitP = JOptionPane.showInput(frame, "Problem goes here", null)
+			}
+			else if(currentEvent == "jumpingkinematicP"){
+				String answerjkP = JOptionPane.showInputDialog(frame, "Problem goes here", null)
+				
+			}
+			else if(currentEvent == "blockP"){
+				
+			}
+			else if(currentEvent == "pendulumP"){
+				
+			}
 
+		}
+		
 		//GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().setFullScreenWindow(frame); //Take over the whole screen
 
 		main.start();
