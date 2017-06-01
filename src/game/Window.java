@@ -1,4 +1,4 @@
-
+package game;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,17 +30,17 @@ public class Window{
 		if(currentEvent != "none"){
 			
 			if(currentEvent == "circuitP"){
-				String answercircuitP = JOptionPane.showInput(frame, "Problem goes here", null)
+				String answercircuitP = JOptionPane.showInput(frame, "Problem goes here", null);
 			}
 			else if(currentEvent == "jumpingkinematicP"){
-				String answerjkP = JOptionPane.showInputDialog(frame, "Problem goes here", null)
+				String answerjkP = JOptionPane.showInputDialog(frame, "Problem goes here", null);
 				
 			}
 			else if(currentEvent == "blockP"){
-				String answerbP = JOptionPane.showInput(frame, "Problem goes here", null)
+				String answerbP = JOptionPane.showInput(frame, "Problem goes here", null);
 			}
 			else if(currentEvent == "pendulumP"){
-				String answer JOptionPane.showInput(frame,"Problem goes here, null");
+				String answer JOptionPane.showInput(frame,"Problem goes here, null", null);
 				
 			}
 
